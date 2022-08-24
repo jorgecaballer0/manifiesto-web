@@ -176,6 +176,8 @@ nav ul a {
 /*** Footer ***/
 
 footer {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
 }
 
