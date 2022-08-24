@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Logo from "../../assets/img/Logos/logotipo.png";
 
 const Header = () => {
+  const [showLogo, setShowLogo] = useState(false);
+
+  const changeLogo = () => {
+    if (window.scrollY >= 700) {
+      setShowLogo(true);
+    } else {
+      setShowLogo(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", changeLogo);
+
+    return () => {
+      window.removeEventListener("scroll", changeLogo);
+    };
+  }, []);
+
   return (
     <header>
       <div>
-        <img src="logo" alt="manifiesto-logo" />
+        {showLogo ? (
+          <img src={Logo} alt="manifiesto-logo" className="logo-header" />
+        ) : (
+          ""
+        )}
       </div>
       <nav>
         <ul>

@@ -10,15 +10,15 @@ const Home = () => {
     <>
       <div className="banner-home">
         <img src={Logo} alt="Logo" className="logo-home" />
-        <btn className="btn-home">
+        <button className="btn-home">
           <a href="#manifiesto">
             Sobre Manifiesto <FiArrowDownCircle />
           </a>
-        </btn>
+        </button>
       </div>
       <HomeIcons />
-      <HomeServices/>
-      <Contact/>
+      <HomeServices />
+      <Contact />
     </>
   );
 };

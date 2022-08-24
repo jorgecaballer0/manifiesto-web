@@ -1,6 +1,5 @@
 /*** Fonts ***/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
 /*** General ***/
 * {
@@ -14,8 +13,7 @@ html {
 }
 
 #manifiesto {
-  background: #FFFFFF;
-  ;
+  background: #ffffff;
 }
 #servicios {
   background: #555;
@@ -27,15 +25,18 @@ html {
 /*** Header ***/
 
 header {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background-color: #F5F5F5;
-  height: 90px;
-  width: 100%;
-  z-index: 999;
+  background-color: #f5f5f5;
+  z-index: 100;
+  box-shadow: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
 }
 
 nav ul {
@@ -45,7 +46,7 @@ nav ul {
 
 nav ul a {
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3rem;
@@ -55,12 +56,35 @@ nav ul a {
   text-align: left;
 }
 
+.logo-header {
+  width: 300px;
+  height: 100%;
+  animation: showLogo 0.5s ease-in;
+}
+@keyframes showLogo {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*** Home ***/
 
 .banner-home {
   background-image: url(assets/img/Banners/home.jpg);
   background-size: cover;
-  height: 130vh;
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -79,14 +103,14 @@ nav ul a {
   width: 20%;
   margin-bottom: 10vh;
   margin-left: 100px;
-  border: .5px solid;
+  border: 0.5px solid;
   border-radius: 20px;
   border-color: #555;
   background-color: rgb(202, 192, 192);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 15px;
 }
-.btn-home a{
+.btn-home a {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3rem;
@@ -108,7 +132,7 @@ nav ul a {
   justify-content: space-between;
 }
 
-.container-icon-description{
+.container-icon-description {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -121,12 +145,12 @@ nav ul a {
   width: 230px;
 }
 .container div > h2 {
-  color: #79695D;
+  color: #79695d;
   margin-top: 3px;
   margin-bottom: 10px;
 }
 .container .btn-home {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 /*** Home - Servicios ***/
@@ -151,6 +175,6 @@ nav ul a {
 
 /*** Footer ***/
 
-footer{
+footer {
   text-align: center;
 }
