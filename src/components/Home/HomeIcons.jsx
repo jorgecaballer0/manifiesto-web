@@ -7,12 +7,12 @@ const HomeIcons = () => {
   return (
     <section id="manifiesto" className="container">
       <div className="container-icons">
-        <div>
+        <div className="container-icon-description">
           <img src={Icono1} alt="icono 1" />
           <h2>Tus ideas</h2>
           <p>Manifesta tus ideas que nosotros las volvemos realidad</p>
         </div>
-        <div>
+        <div className="container-icon-description">
           <img src={Icono2} alt="icono 2" />
           <h2>En todo el mundo</h2>
           <p>
@@ -20,9 +20,11 @@ const HomeIcons = () => {
           </p>
         </div>
       </div>
-      <a href="#servicios">
-        Nuestros servicios <FiArrowDownCircle />
-      </a>
+      <btn className="btn-home">
+        <a href="#servicios">
+          Nuestros servicios <FiArrowDownCircle />
+        </a>
+      </btn>      
     </section>
   );
 };

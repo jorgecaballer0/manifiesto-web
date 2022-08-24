@@ -1,3 +1,8 @@
+/*** Fonts ***/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+
+/*** General ***/
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +14,8 @@ html {
 }
 
 #manifiesto {
-  background: #444;
+  background: #FFFFFF;
+  ;
 }
 #servicios {
   background: #555;
@@ -26,8 +32,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-
-  background-color: #777;
+  background-color: #F5F5F5;
   height: 90px;
   width: 100%;
   z-index: 999;
@@ -35,34 +40,57 @@ header {
 
 nav ul {
   display: flex;
-  
   list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 24px;
+  color: #000000;
+  margin: 1rem;
+  text-align: left;
 }
 
 /*** Home ***/
 
 .banner-home {
-  width: 100vw;
-  height: 100vh;
+  background-image: url(assets/img/Banners/home.jpg);
+  background-size: cover;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: left;
 }
 
 .logo-home {
-  position: absolute;
-  width: 464px;
-  height: 440px;
-  left: 124px;
-  top: 247px;
-
+  width: 400px;
+  margin-bottom: 10vh;
+  margin-left: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .btn-home {
-  position: absolute;
-  width: 304px;
-  height: 63px;
-  left: 209px;
-  top: 771px;
+  width: 20%;
+  margin-bottom: 10vh;
+  margin-left: 100px;
+  border: .5px solid;
+  border-radius: 20px;
+  border-color: #555;
+  background-color: rgb(202, 192, 192);
+  font-family: 'Inter', sans-serif;
+  padding: 15px;
+}
+.btn-home a{
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #000000;
 }
 
 /*** Home - Iconos ***/
@@ -71,18 +99,34 @@ nav ul {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .container-icons {
   display: flex;
+  justify-content: space-between;
+}
+
+.container-icon-description{
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  text-align: center;
 }
 
 .container div > img {
-  width: 200px;
-  height: 200px;
+  width: 230px;
+}
+.container div > h2 {
+  color: #79695D;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.container .btn-home {
+  background-color: #F5F5F5;
 }
 
 /*** Home - Servicios ***/
