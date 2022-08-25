@@ -9,7 +9,9 @@ const Home = () => {
   return (
     <>
       <div className="banner-home">
-        <img src={Logo} alt="Logo" className="logo-home" />
+        <div className="showLogo">
+          <img src={Logo} alt="Logo" className="logo-home"/>
+        </div>
         <button className="btn-home">
           <a href="#manifiesto">
             Sobre Manifiesto <FiArrowDownCircle />
