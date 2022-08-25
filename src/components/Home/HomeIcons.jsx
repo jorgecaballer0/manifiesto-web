@@ -20,12 +20,12 @@ const HomeIcons = () => {
           </p>
         </div>
       </div>
-      <btn className="btn-home">
+      <button className="btn-home">
         <a href="#servicios">
           <p> Nuestros servicios  </p>
           <FiArrowDownCircle />
         </a>
-      </btn>
+      </button>
     </section>
   );
 };

@@ -20,10 +20,10 @@ html {
   background: #ffffff;
 }
 #servicios {
-  background: #555;
+  background: #EDEDED;
 }
 #contacto {
-  background: #666;
+  background: #EDEDED;
 }
 
 /*** Header ***/
@@ -126,7 +126,7 @@ nav ul a {
 /*** Home - Iconos ***/
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -195,10 +195,92 @@ nav ul a {
 
 /*** Home - Servicios ***/
 
+.container-title {
+  width: 80%;
+}
+
+.container h1{
+  font-family: Avenir;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .cards-container {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   margin: 0 5rem;
+}
+
+.cards {
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 40%;
+  height: 560px;
+  font-family: Avenir;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.cards-content {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cards-content h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.container .cards-content img {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}
+.cards p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-brown {
+  border: 0.5px solid;
+  border-radius: 10px;
+  border-color: #79695D;
+  background-color: #79695D;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  font-family: Avenir;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 29px;
+  padding: 15px;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.btn-brown a {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /*** Contacto ***/
