@@ -8,15 +8,15 @@ const Footer = () => {
     <footer>
       <div>
         <AiOutlineWhatsApp />
-        <p>Whatsapp</p>
+        <p>1124515031</p>
       </div>
       <div>
         <AiOutlineMail />
-        <p>Correo</p>
+        <p>natalia.mf@live.com.ar</p>
       </div>
       <div>
         <AiFillBehanceSquare />
-        <p>Behance</p>
+        <p>Natalia Martínez Furió</p>
       </div>
     </footer>
   );

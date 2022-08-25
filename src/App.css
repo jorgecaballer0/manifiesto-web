@@ -125,6 +125,7 @@ nav ul a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
 }
 
 .container-icons {
@@ -179,8 +180,14 @@ footer {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  height: 100px;
 }
 
+footer > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 /**** SECCIÓN - SERVICIOS ****/
 
@@ -194,8 +201,6 @@ footer {
   text-align: center;
 }
 
-
-
 /**** SECCIÓN - PORTFOLIO ****/
 
 .banner-portfolio {
@@ -206,4 +211,37 @@ footer {
 
 .banner-portfolio h1 {
   text-align: center;
+}
+
+.cards-services{
+  display: flex;
+  width: 1200px;
+  height: 300px;
+}
+.cards-services > img{
+  width: 200px;
+  height: 200px;
+}
+/*** Tarjetas del Portfolio ***/
+
+.div-projects {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ccc;
+}
+
+.div-projects-2 {
+  width: 1200px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ccc;
+}
+
+.img-projects {
+  width: 650px;
+  height: 350px;
 }
