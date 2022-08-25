@@ -1,5 +1,9 @@
 /*** Fonts ***/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir'), url(./assets/fonts/Avenir/AvenirNextLTPro-Regular.otf) format('opentype');
+}
 
 /*** General ***/
 * {
@@ -107,7 +111,7 @@ nav ul a {
   border-radius: 20px;
   border-color: #555;
   background-color: rgb(202, 192, 192);
-  font-family: "Inter", sans-serif;
+  font-family: Avenir;
   padding: 15px;
 }
 .btn-home a {
@@ -115,6 +119,8 @@ nav ul a {
   font-weight: 700;
   font-size: 1.3rem;
   color: #000000;
+  display: flex;
+  justify-content: space-around;
 }
 
 /*** Home - Iconos ***/
@@ -140,18 +146,51 @@ nav ul a {
   align-items: center;
   width: 40%;
   text-align: center;
+  font-family: Avenir;
+  font-size: 20px;
 }
 
 .container div > img {
   width: 230px;
 }
+
 .container div > h2 {
   color: #79695d;
   margin-top: 3px;
   margin-bottom: 10px;
+  font-size: 32px;
 }
 .container .btn-home {
   background-color: #f5f5f5;
+}
+
+.animation-sideToSide :hover {
+  animation-duration: 3s;
+  animation-name: sideToSide;
+}
+@keyframes sideToSide {
+  0% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+.animation-rotate360 :hover {
+  animation-duration: 3s;
+  animation-name: rotate360;
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(-360deg);
+  }
 }
 
 /*** Home - Servicios ***/
