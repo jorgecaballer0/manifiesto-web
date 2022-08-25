@@ -1,7 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
   const [sendForm, setSendForm] = useState(false);
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        // "service_9xh9j7u",
+        // "template_55v539u",
+        form.current
+        // "M54wTzfoq4u_kvpgp"
+      )
+      .then((response) => {
+        console.log(response.text);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    e.target.reset();
+  };
 
   const handleClick = () => {
     setSendForm(true);
@@ -11,20 +31,27 @@ const Form = () => {
   };
 
   return (
-    <div className="form">
+    <form ref={form} onSubmit={sendEmail}>
       <label htmlFor="">Nombre</label>
-      <input type="text" placeholder="Ingrese su nombre" />
+      <input type="text" name="name" placeholder="Ingresá tu nombre" required />
       <label htmlFor="">Correo</label>
-      <input type="email" placeholder="Ingrese su email" />
+      <input
+        type="email"
+        name="email"
+        placeholder="Ingresá tu e-mail"
+        required
+      />
       <label htmlFor="">Consulta</label>
       <textarea
-        name=""
-        id=""
+        name="message"
         cols="30"
         rows="10"
-        placeholder="Ingrese su consulta"
+        placeholder="Ingresá tu consulta"
+        required
       ></textarea>
-      <button onClick={handleClick}>Enviar</button>
+      <button type="submit" onClick={handleClick}>
+        Enviar mensaje
+      </button>
       {sendForm && (
         <div>
           <p>
@@ -33,7 +60,7 @@ const Form = () => {
           </p>
         </div>
       )}
-    </div>
+    </form>
   );
 };
 
