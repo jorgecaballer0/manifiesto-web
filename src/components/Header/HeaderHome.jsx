@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/Logos/logotipo.png";
+import { animateScroll as scroll, Link as Scroll } from "react-scroll";
 
 const Header = () => {
   const [showLogo, setShowLogo] = useState(false);
@@ -20,6 +21,10 @@ const Header = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <header>
       <div>
@@ -28,6 +33,7 @@ const Header = () => {
             src={Logo}
             alt="manifiesto-logo"
             className="logo-header showLogo"
+            onClick={scrollToTop}
           />
         ) : (
           ""
@@ -42,7 +48,9 @@ const Header = () => {
             <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <Scroll to="contacto" smooth={true} duration={300} offset={-40}>
+              Contacto
+            </Scroll>
           </li>
         </ul>
       </nav>

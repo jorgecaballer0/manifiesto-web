@@ -1,8 +1,13 @@
 import React from "react";
 import Logo from "../../assets/img/Logos/logotipo.png";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 const Header = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <header>
       <div>
@@ -10,6 +15,7 @@ const Header = () => {
           src={Logo}
           alt="manifiesto-logo"
           className="logo-header showLogo"
+          onClick={scrollToTop}
         />
       </div>
       <nav>
@@ -24,7 +30,7 @@ const Header = () => {
             <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <Link to="/">Contacto</Link>
           </li>
         </ul>
       </nav>

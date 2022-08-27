@@ -17,6 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: Avenir, Helvetica, sans-serif;
+}
+
 #manifiesto {
   background: #ffffff;
 }
@@ -59,11 +63,13 @@ nav ul a {
   color: #000000;
   margin: 1rem;
   text-align: left;
+  cursor: pointer;
 }
 
 .logo-header {
   width: 300px;
   height: 100%;
+  cursor: pointer;
 }
 .showLogo {
   animation: showLogo 2s ease-in-out;

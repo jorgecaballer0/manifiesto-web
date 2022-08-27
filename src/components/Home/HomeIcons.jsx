@@ -2,6 +2,7 @@ import React from "react";
 import Icono1 from "../../assets/img/Servicios/icono.png";
 import Icono2 from "../../assets/img/Servicios/mundo.png";
 import { FiArrowDownCircle } from "react-icons/fi";
+import { Link } from "react-scroll";
 
 const HomeIcons = () => {
   return (
@@ -25,10 +26,10 @@ const HomeIcons = () => {
         </div>
       </div>
       <button className="btn-home">
-        <a href="#servicios">
-          <p> Nuestros servicios  </p>
+        <Link to="servicios" smooth={true} duration={300} offset={-40}>
+          <p> Nuestros servicios </p>
           <FiArrowDownCircle />
-        </a>
+        </Link>
       </button>
     </section>
   );
