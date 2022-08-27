@@ -9,10 +9,10 @@ const Form = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        // process.env.REACT_APP_SERVICES_ID,
-        // process.env.REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_SERVICES_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        // process.env.REACT_APP_PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then((response) => {
         if (response.status === 200) {
@@ -31,34 +31,14 @@ const Form = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail}>
-      <div  className="contact-form">
+      <div className="contact-form">
         <div>
-          <input
-            type="text"
-            name="name"
-            placeholder="Nombre"
-            required
-          />
-          <input
-            type="text"
-            name="surname"
-            placeholder="Apellido"
-            required
-          />
+          <input type="text" name="name" placeholder="Nombre" required />
+          <input type="text" name="surname" placeholder="Apellido" required />
         </div>
         <div>
-          <input
-            type="text"
-            name="phone"
-            placeholder="Telefono"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            required
-          />
+          <input type="text" name="phone" placeholder="Telefono" required />
+          <input type="email" name="email" placeholder="E-mail" required />
         </div>
         <textarea
           name="message"
@@ -67,16 +47,18 @@ const Form = () => {
           placeholder="Consulta"
           required
         ></textarea>
-        <button type="submit" className="btn-brown">Enviar</button>
-      </div>  
+        <button type="submit" className="btn-brown">
+          Enviar
+        </button>
+      </div>
       {textSend && (
-          <div className="container">
-            <p className="contact-form-send">
-              ¡Muchas gracias por tu mensaje! Nos estaremos contactando a la
-              brevedad
-            </p>
-          </div>
-        )}    
+        <div className="container">
+          <p className="contact-form-send">
+            ¡Muchas gracias por tu mensaje! Nos estaremos contactando a la
+            brevedad.
+          </p>
+        </div>
+      )}
     </form>
   );
 };

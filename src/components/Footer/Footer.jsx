@@ -1,21 +1,21 @@
 import React from "react";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { AiOutlineMail } from "react-icons/ai";
-import { AiFillBehanceSquare } from "react-icons/ai";
+import { BsWhatsapp } from "react-icons/bs";
+import { MdOutlineMail } from "react-icons/md";
+import { BsBehance } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer>
-      <div>
-        <AiOutlineWhatsApp />
+      <div className="contact-whatsapp">
+        <BsWhatsapp />
         <p>1124515031</p>
       </div>
-      <div>
-        <AiOutlineMail />
+      <div className="contact-mail">
+        <MdOutlineMail />
         <p>natalia.mf@live.com.ar</p>
       </div>
-      <div>
-        <AiFillBehanceSquare />
+      <div className="contact-behance">
+        <BsBehance />
         <p>Natalia Martínez Furió</p>
       </div>
     </footer>
