@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/img/Logos/logotipo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
 const Header = () => {
@@ -21,16 +21,32 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="btn-nav">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/servicios">Servicios</Link>
+            <NavLink
+              to="/servicios"
+              activeClassName="active"
+              className="btn-nav"
+            >
+              Servicios
+            </NavLink>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <NavLink
+              to="/portfolio"
+              activeClassName="active"
+              className="btn-nav"
+            >
+              Portfolio
+            </NavLink>
           </li>
           <li>
-            <Link to="/">Contacto</Link>
+            <Link to="/" className="btn-contact">
+              Contacto
+            </Link>
           </li>
         </ul>
       </nav>
