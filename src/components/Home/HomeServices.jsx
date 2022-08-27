@@ -11,7 +11,7 @@ const HomeServices = () => {
         <h1>Servicios</h1>
       </div>
       <div className="cards-container">
-        <article className="cards">
+        <article className="box cards">
           <div className="cards-content">
             <h3>Branding</h3>
             <img src={Branding} alt="Imagen" />
@@ -24,7 +24,7 @@ const HomeServices = () => {
             <Link to="/servicios">Ver más</Link>
           </button>
         </article>
-        <article className="cards">
+        <article className="box cards">
           <div className="cards-content">
             <h3>Manejo de redes</h3>
             <img src={Redes} alt="Imagen" />
@@ -37,7 +37,7 @@ const HomeServices = () => {
             <Link to="/servicios">Ver más</Link>
           </button>
         </article>
-        <article className="cards">
+        <article className="box cards">
           <div className="cards-content">
             <h3>Diseño</h3>
             <img src={Diseño} alt="Imagen" />

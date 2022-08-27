@@ -4,7 +4,7 @@ import Form from "./Form";
 const Contact = () => {
   return (
     <section id="contacto" className="container">
-      <div className="contact">
+      <div className="box contact">
         <h1>Contacto</h1>
         <div>
           <p>

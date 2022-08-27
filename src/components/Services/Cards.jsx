@@ -5,8 +5,8 @@ import IMG3 from "../../assets/img/Banners/redes.jpg";
 
 const Cards = () => {
   return (
-    <section className="container">
-      <article className="cards-services">
+    <section className="container container-services">
+      <article className="box cards-services">
         <img src={IMG1} alt="Branding" />
         <div>
           <h3>Branding</h3>
@@ -20,7 +20,7 @@ const Cards = () => {
           </p>
         </div>
       </article>
-      <article className="cards-services">
+      <article className="box cards-services">
         <img src={IMG2} alt="Manejo de redes" />
         <div>
           <h3>Manejo de redes</h3>
@@ -34,7 +34,7 @@ const Cards = () => {
           </p>
         </div>
       </article>
-      <article className="cards-services">
+      <article className="box cards-services">
         <img src={IMG3} alt="Diseño" />
         <div>
           <h3>Diseño</h3>

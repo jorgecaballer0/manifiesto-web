@@ -25,10 +25,7 @@ body {
 #manifiesto {
   background: #ffffff;
 }
-#servicios {
-  background: #ededed;
-}
-#contacto {
+#servicios, #contacto, .container-services {
   background: #ededed;
 }
 
@@ -178,6 +175,7 @@ nav ul a {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  gap: 1rem;
 }
 
 .container-icons {
@@ -264,13 +262,14 @@ nav ul a {
   width: 85%;
 }
 
-.cards {
+.box {
   background-color: #ffffff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+}
+.cards {
   width: 40%;
   min-height: 560px;
-  font-family: Avenir;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -285,7 +284,7 @@ nav ul a {
   align-items: flex-start;
 }
 
-.cards-content h3 {
+.cards-content h3, .cards-services h3 {
   font-size: 32px;
   font-weight: 600;
   line-height: 44px;
@@ -299,7 +298,7 @@ nav ul a {
   border-radius: 20px;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
 }
-.cards p {
+.cards p , .cards-services p{
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -335,9 +334,6 @@ nav ul a {
 /*** Contacto ***/
 
 .contact {
-  background-color: #ffffff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -411,14 +407,43 @@ footer > div {
 
 /**** SECCIÓN - SERVICIOS ****/
 
+.container-services{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .banner-services {
   background-image: url(./assets/img/Banners/servicios.jpg);
   background-size: cover;
   height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .banner-services h1 {
   text-align: center;
+  margin-bottom: 7rem;
+  font-size: 85px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.cards-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 85%;
+}
+.cards-services > img {
+  width: 30%;
+  margin: 2rem;
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}
+.cards-services > div {
+  margin: 2rem;
 }
 
 /**** SECCIÓN - PORTFOLIO ****/
@@ -433,15 +458,7 @@ footer > div {
   text-align: center;
 }
 
-.cards-services {
-  display: flex;
-  width: 1200px;
-  height: 300px;
-}
-.cards-services > img {
-  width: 200px;
-  height: 200px;
-}
+
 /*** Tarjetas del Portfolio ***/
 
 .projects {
