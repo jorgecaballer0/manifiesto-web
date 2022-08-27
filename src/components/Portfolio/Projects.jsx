@@ -4,13 +4,12 @@ import IMG2 from "../../assets/img/Portfolio/tarjetas-port-02.jpg";
 
 const Projects = () => {
   return (
-    <section className="container">
+    <section className="container container-projects">
       <div>
         <a
           href="https://natmartinezfurio.myportfolio.com/edels-branding"
           target="_blank"
           rel="noreferrer"
-          className="projects"
         >
           <img src={IMG1} alt="edels" className="img-projects" />
         </a>
@@ -20,12 +19,11 @@ const Projects = () => {
           href="https://natmartinezfurio.myportfolio.com/the-greens-branding"
           target="_blank"
           rel="noreferrer"
-          className="projects"
         >
           <img src={IMG2} alt="the greens" className="img-projects" />
         </a>
       </div>
-      <button>
+      <button className="btn-brown">
         <a
           href="https://natmartinezfurio.myportfolio.com/work"
           target="_blank"

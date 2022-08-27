@@ -25,7 +25,7 @@ body {
 #manifiesto {
   background: #ffffff;
 }
-#servicios, #contacto, .container-services {
+#servicios, #contacto, .container-services, .container-projects {
   background: #ededed;
 }
 
@@ -407,21 +407,23 @@ footer > div {
 
 /**** SECCIÓN - SERVICIOS ****/
 
-.container-services{
+.container-services, .container-projects{
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-.banner-services {
-  background-image: url(./assets/img/Banners/servicios.jpg);
+.banners {
   background-size: cover;
   height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
+.banner-services {
+  background-image: url(./assets/img/Banners/servicios.jpg);
+}
 
-.banner-services h1 {
+.banners h1 {
   text-align: center;
   margin-bottom: 7rem;
   font-size: 85px;
@@ -450,23 +452,14 @@ footer > div {
 
 .banner-portfolio {
   background-image: url(./assets/img/Banners/portfolio.jpg);
-  background-size: cover;
-  height: calc(100vh - 90px);
 }
 
-.banner-portfolio h1 {
-  text-align: center;
+.container-projects div {
+  width: 70%;
 }
-
-
-/*** Tarjetas del Portfolio ***/
-
-.projects {
-  width: 1200px;
-  background-color: #ccc;
-}
-
 .img-projects {
-  width: 650px;
-  height: 350px;
+  width: 100%;
+  margin: 2rem;
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
 }

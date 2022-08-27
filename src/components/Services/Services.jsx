@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <>
       <Header />
-      <div className="banner-services">
+      <div className="banner-services banners">
         <h1>Servicios</h1>
       </div>
       <Cards />
