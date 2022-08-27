@@ -1,6 +1,5 @@
 import React from "react";
 import Form from "./Form";
-import Links from "./Links";
 
 const Contact = () => {
   return (
@@ -12,7 +11,6 @@ const Contact = () => {
       </p>
       <div className="contact">
         <Form />
-        <Links />
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../assets/img/Logos/logotipo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,10 +15,13 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="#1">Servicios</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#2">Portfolio</a>
+            <Link to="/servicios">Servicios</Link>
+          </li>
+          <li>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
             <a href="#contacto">Contacto</a>

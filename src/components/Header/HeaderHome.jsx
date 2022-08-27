@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/img/Logos/logotipo.png";
 
 const Header = () => {
@@ -23,7 +24,11 @@ const Header = () => {
     <header>
       <div>
         {showLogo ? (
-          <img src={Logo} alt="manifiesto-logo" className="logo-header showLogo" />
+          <img
+            src={Logo}
+            alt="manifiesto-logo"
+            className="logo-header showLogo"
+          />
         ) : (
           ""
         )}
@@ -31,10 +36,10 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="#1">Servicios</a>
+            <Link to="/servicios">Servicios</Link>
           </li>
           <li>
-            <a href="#2">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
             <a href="#contacto">Contacto</a>
