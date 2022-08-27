@@ -1,7 +1,7 @@
 import React from "react";
 import Icono1 from "../../assets/img/Servicios/icono.png";
 import Icono2 from "../../assets/img/Servicios/mundo.png";
-import { FiArrowDownCircle } from "react-icons/fi";
+import { BsArrowDownCircle } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const HomeIcons = () => {
@@ -28,7 +28,7 @@ const HomeIcons = () => {
       <button className="btn-home">
         <Link to="servicios" smooth={true} duration={300} offset={-40}>
           <p> Nuestros servicios </p>
-          <FiArrowDownCircle />
+          <BsArrowDownCircle />
         </Link>
       </button>
     </section>

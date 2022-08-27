@@ -41,14 +41,25 @@ const Header = () => {
       </div>
       <nav>
         <ul>
+          
           <li>
-            <Link to="/servicios">Servicios</Link>
+            <Link to="/servicios" className="btn-nav">
+              Servicios
+            </Link>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/portfolio" className="btn-nav">
+              Portfolio
+            </Link>
           </li>
           <li>
-            <Scroll to="contacto" smooth={true} duration={300} offset={-40}>
+            <Scroll
+              to="contacto"
+              className="btn-contact"
+              smooth={true}
+              duration={300}
+              offset={-40}
+            >
               Contacto
             </Scroll>
           </li>
