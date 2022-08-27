@@ -31,52 +31,52 @@ const Form = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail}>
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Ingresá tu nombre"
+      <div  className="contact-form">
+        <div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre"
+            required
+          />
+          <input
+            type="text"
+            name="surname"
+            placeholder="Apellido"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Telefono"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
+        </div>
+        <textarea
+          name="message"
+          cols="30"
+          rows="5"
+          placeholder="Consulta"
           required
-        />
-        <input
-          type="text"
-          name="surname"
-          placeholder="Ingresá tu apellido"
-          required
-        />
-      </div>
-      <div>
-        <input
-          type="text"
-          name="phone"
-          placeholder="Ingresá tu N° de telefono"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Ingresá tu e-mail"
-          required
-        />
-      </div>
-      <textarea
-        name="message"
-        cols="30"
-        rows="10"
-        placeholder="Ingresá tu consulta"
-        required
-      ></textarea>
-      <div>
-        <button type="submit">Enviar mensaje</button>
-        {textSend && (
-          <div>
-            <p>
+        ></textarea>
+        <button type="submit" className="btn-brown">Enviar</button>
+      </div>  
+      {textSend && (
+          <div className="container">
+            <p className="contact-form-send">
               ¡Muchas gracias por tu mensaje! Nos estaremos contactando a la
               brevedad
             </p>
           </div>
-        )}
-      </div>
+        )}    
     </form>
   );
 };
