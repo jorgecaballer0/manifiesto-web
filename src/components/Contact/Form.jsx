@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Form = () => {
+  const [sending, setSending] = useState(false);
   const [textSend, setTextSend] = useState(false);
 
   const form = useRef();
@@ -15,12 +16,14 @@ const Form = () => {
         process.env.REACT_APP_PUBLIC_KEY
       )
       .then((response) => {
-        if (response.status === 200) {
+        setSending(true);
+        setTimeout(() => {
+          setSending(false);
           setTextSend(true);
           setTimeout(() => {
             setTextSend(false);
-          }, 3000);
-        }
+          }, 4000);
+        }, 1000);
         console.log(response.text);
       })
       .catch((error) => {
@@ -37,7 +40,7 @@ const Form = () => {
           <input type="text" name="surname" placeholder="Apellido" required />
         </div>
         <div>
-          <input type="text" name="phone" placeholder="Telefono" required />
+          <input type="tel" name="phone" placeholder="Telefono" required />
           <input type="email" name="email" placeholder="E-mail" required />
         </div>
         <textarea
@@ -51,8 +54,13 @@ const Form = () => {
           Enviar
         </button>
       </div>
+      {sending && (
+        <div>
+          <p className="contact-form-send">Enviando...</p>
+        </div>
+      )}
       {textSend && (
-        <div className="container">
+        <div>
           <p className="contact-form-send">
             ¡Muchas gracias por tu mensaje! Nos estaremos contactando a la
             brevedad.
