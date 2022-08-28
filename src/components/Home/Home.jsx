@@ -16,7 +16,7 @@ const Home = () => {
           <img src={Logo} alt="Logo" className="logo-home" />
         </div>
         <button className="btn-home">
-          <Link to="manifiesto" smooth={true} duration={300} offset={-40}>
+          <Link to="manifiesto" smooth={true} duration={300} offset={-70}>
             Sobre Manifiesto <BsArrowDownCircle />
           </Link>
         </button>
