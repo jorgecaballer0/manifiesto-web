@@ -629,10 +629,4 @@ footer > div {
   .cards-services > img {
     width: 80%;
   }
-
-  /* Portfoolio */
-  .container-projects div {
-    width: 80%;
-    margin: 0rem;
-  } 
 }
