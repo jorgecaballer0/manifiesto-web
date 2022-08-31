@@ -1,6 +1,5 @@
 /*** Fonts ***/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @font-face {
   font-family: "Avenir";
   src: local("Avenir"),
@@ -38,8 +37,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  height: 90px;
-  width: 100%;
+  min-height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +66,7 @@ nav ul a {
 }
 
 .logo-header {
-  width: 300px;
+  width: 30%;
   height: 100%;
   cursor: pointer;
 }
@@ -138,23 +136,22 @@ nav ul a {
 }
 
 .logo-home {
-  width: 450px;
-  margin-bottom: 10vh;
-  margin-left: 30px;
+  width: 35%;
+  margin-left: 2rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .btn-home {
-  width: 20%;
-  margin-bottom: 10vh;
-  margin-left: 100px;
+  width: fit-content;
+  margin-bottom: 3rem;
+  margin-left: 8vw;
   border: 0.5px solid;
   border-radius: 20px;
   border-color: #555;
   background-color: rgb(202, 192, 192);
   font-family: Avenir;
-  padding: 15px;
+  padding: 1rem 3rem ;
 }
 
 .btn-home a {
@@ -183,29 +180,28 @@ nav ul a {
 
 .container-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .container-icon-description {
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 40%;
   text-align: center;
-  font-family: Avenir;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .container div > img {
-  width: 230px;
+  width: 55%;
 }
 
 .container div > h2 {
   color: #79695d;
-  margin-top: 3px;
-  margin-bottom: 10px;
-  font-size: 32px;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 .container .btn-home {
   background-color: #f5f5f5;
@@ -247,7 +243,6 @@ nav ul a {
 }
 
 .container h1 {
-  font-family: Avenir;
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 24px;
@@ -272,7 +267,7 @@ nav ul a {
 }
 .cards {
   width: 40%;
-  min-height: 560px;
+  min-height: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -289,7 +284,7 @@ nav ul a {
 
 .cards-content h3,
 .cards-services h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 44px;
   letter-spacing: 0em;
@@ -306,7 +301,7 @@ nav ul a {
 .cards-services p {
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 27px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -319,9 +314,9 @@ nav ul a {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   font-family: Avenir;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 29px;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
   color: #ffffff;
@@ -347,7 +342,7 @@ nav ul a {
   gap: 1rem;
   align-items: flex-start;
   padding: 2rem;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 38px;
   margin-top: 4rem;
@@ -372,7 +367,7 @@ textarea {
   width: 50%;
   padding: 1rem;
   font-family: Avenir;
-  font-size: 19px;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 29px;
   letter-spacing: 0px;
@@ -393,7 +388,7 @@ textarea {
 .contact-form-send {
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 38px;
   color: #79695d;
 }
@@ -449,20 +444,19 @@ footer > div {
 .banners h1 {
   text-align: center;
   margin-bottom: 7rem;
-  font-size: 85px;
+  font-size: 5.3rem;
   font-weight: 600;
   line-height: 20px;
-  letter-spacing: 0px;
 }
 
 .cards-services {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 70%;
+  width: 80%;
 }
 .cards-services > img {
-  width: 300px;
+  width: 30%;
   margin: 2rem;
   border-radius: 20px;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
@@ -511,4 +505,134 @@ footer > div {
 }
 .page404 a {
   text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  /* Home */
+  .logo-header {
+    width: 60%;
+  }
+  .logo-home {
+    width: 60%;
+  }
+  .btn-home {
+    margin-left: 10vw;
+  }
+  .btn-home a {
+    font-size: 1.5rem;
+  }
+  .container-icon-description {
+    width: 45%;
+    font-size: 1.7rem;
+  }
+  .container div > h2 {
+    font-size: 2.5rem;
+  }
+  .container div > img {
+    width: 70%;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  .cards-container {
+    gap: 1rem;
+    width: 95%;
+  }
+  .cards {
+    min-height: 37rem;
+  }
+
+  /* Servicios */
+  .cards-services {
+    width: 90%;
+  }
+  .cards-services > img {
+    width: 35%;
+  }
+
+  /* Portfoolio */
+  .container-projects div {
+    width: 80%;
+    margin: 0rem;
+  } 
+}
+
+@media screen and (max-width: 767px) {
+
+  /* Home */
+  .logo-header {
+    width: 90%;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: .2rem;
+    margin-bottom: .3rem;
+  }
+  .banner-home {
+    align-items: center;
+  }
+  .banner-home div {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-home {
+    width: 80%;
+  }
+  .btn-home {
+    margin-left: 0vw;
+  }
+  .container-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-icon-description {
+    width: 90%;
+    font-size: 1.7rem;
+    margin: 1rem;
+  }
+  .container div > h2 {
+    font-size: 3rem;
+  }
+  .container div > img {
+    width: 80%;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  .cards-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cards {
+    width: 90%;
+    min-height: fit-content;
+  }
+  .contact-form div {
+    flex-direction: column;
+  }
+  .contact-form input {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Servicios */
+  .cards-services {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .cards-services > img {
+    width: 80%;
+  }
+
+  /* Portfoolio */
+  .container-projects div {
+    width: 80%;
+    margin: 0rem;
+  } 
 }
