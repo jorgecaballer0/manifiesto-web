@@ -46,7 +46,6 @@ header {
   z-index: 100;
   box-shadow: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
 }
-
 nav ul {
   display: flex;
   list-style: none;
@@ -123,11 +122,46 @@ nav ul a {
   background-color: #564c45;
 }
 
+/* BURGER MENU */
+.bm-burger-button {
+  position: fixed;
+  width: 2.5rem;
+  height: 2rem;
+  right: 2rem;
+  top: 2rem;
+}
+.bm-burger-bars {
+  background: #000000;
+}
+.bm-cross-button {
+  height: 2rem;
+  width: 2rem;
+  left: 2rem;
+  padding-top: 2rem;
+}
+.bm-cross {
+  background: #000000;
+}
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0%;
+}
+.bm-menu {
+  background: #f5f5f5;
+  font-size: 1.15em;
+}
+.bm-item-list {
+  padding: 0.8em;
+  margin-top: 2rem;
+}
+
 /*** Home ***/
 
 .banner-home {
   background-image: url(assets/img/Banners/home.jpg);
   background-size: cover;
+  background-position: right;
   height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
@@ -137,7 +171,6 @@ nav ul a {
 
 .logo-home {
   width: 35%;
-  margin-left: 2rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -145,7 +178,7 @@ nav ul a {
 .btn-home {
   width: fit-content;
   margin-bottom: 3rem;
-  margin-left: 8vw;
+  margin-left: 6vw;
   border: 0.5px solid;
   border-radius: 20px;
   border-color: #555;
@@ -432,6 +465,7 @@ footer > div {
 
 .banners {
   background-size: cover;
+  background-position: center;
   height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
@@ -515,7 +549,7 @@ footer > div {
     width: 60%;
   }
   .logo-home {
-    width: 60%;
+    width: 50%;
   }
   .btn-home {
     margin-left: 10vw;
@@ -562,13 +596,14 @@ footer > div {
 @media screen and (max-width: 767px) {
 
   /* Home */
-  .logo-header {
-    width: 90%;
+  .hidden {
+    display: none;
   }
-  nav ul {
-    flex-direction: column;
-    gap: .2rem;
-    margin-bottom: .3rem;
+  .burger-list{
+    padding-top: 1rem;
+  }
+  .logo-header {
+    width: 70%;
   }
   .banner-home {
     align-items: center;
@@ -578,7 +613,7 @@ footer > div {
     justify-content: center;
   }
   .logo-home {
-    width: 80%;
+    width: 70%;
   }
   .btn-home {
     margin-left: 0vw;

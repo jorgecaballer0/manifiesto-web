@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../assets/img/Logos/logotipo.png";
 import { Link, NavLink } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import Burger from "./BurgerMenuSections";
 
 const Header = () => {
   const scrollToTop = () => {
@@ -18,7 +19,8 @@ const Header = () => {
           onClick={scrollToTop}
         />
       </div>
-      <nav>
+      <Burger/>
+      <nav className="hidden">
         <ul>
           <li>
             <Link to="/" className="btn-nav">
