@@ -607,6 +607,7 @@ footer > div {
   }
   .banner-home {
     align-items: center;
+    justify-content: center;
   }
   .banner-home div {
     display: flex;
