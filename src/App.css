@@ -37,7 +37,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  min-height: 90px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +65,7 @@ nav ul a {
 }
 
 .logo-header {
-  width: 30%;
+  width: 25%;
   height: 100%;
   cursor: pointer;
 }
@@ -546,7 +546,7 @@ footer > div {
 @media screen and (max-width: 1024px) {
   /* Home */
   .logo-header {
-    width: 60%;
+    width: 70%;
   }
   .logo-home {
     width: 50%;
@@ -603,7 +603,7 @@ footer > div {
     padding-top: 1rem;
   }
   .logo-header {
-    width: 70%;
+    width: 50%;
   }
   .banner-home {
     align-items: center;
